@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Should I Do It?</title>
+<style>
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+margin-top:120px;
+}
+
+input{
+padding:10px;
+width:260px;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+margin-left:10px;
+background:#00adb5;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+#result{
+margin-top:40px;
+font-size:28px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🤔 Should I Do It?</h1>
+
+<p>Type your dilemma</p>
+
+<input id="question" placeholder="Should I study now?">
+
+<button onclick="decide()">Decide</button>
+
+<div id="result"></div>
+
+<script>
+
+function decide(){
+
+const answers = [
+"YES ✅ Do it!",
+"NO ❌ Bad idea",
+"MAYBE 🤷 Try later",
+"ABSOLUTELY 🔥",
+"NOT TODAY 😴"
+];
+
+const random = Math.floor(Math.random()*answers.length);
+
+document.getElementById("result").innerText = answers[random];
+
+}
+
+</script>
+
+</body>
+</html>
